@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const net = new brain.recurrent.LSTMTimeStep();
 
-// Same test as previous, but combined on a single set
+// Can be used as a recommendation system
 const trainingData = [
 	[1, 4, 5, 6],
 	[1, 4, 5, 6],
