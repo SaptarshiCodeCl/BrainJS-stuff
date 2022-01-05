@@ -1,5 +1,7 @@
 ### This project plays around a bit with recurrent neural networks with Brain.js
 
+## NEED python 2 for this
+
 > node forecast.js
 
 Runs an ltsm with a time-step to create a time-step based guess and prediction with forecast

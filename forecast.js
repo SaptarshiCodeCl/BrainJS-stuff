@@ -22,7 +22,7 @@ if (fs.existsSync('trained.json')) {
 	fs.writeFileSync('trained.json', JSON.stringify(net.toJSON()));
 }
 
-const forecast = net.forecast([1, 3, 2], 2);
+const forecast = net.forecast([1, 1], 2);
 normalised = forecast.map((values) => Math.round(values));
 
 console.log('next 2 predictions', normalised);

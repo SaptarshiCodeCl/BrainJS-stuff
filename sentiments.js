@@ -12,6 +12,7 @@ const trainingData = [
 	{ input: 'The world is a terrible place!', output: categories[1] },
 	{ input: 'I dont feel good about this', output: categories[1] },
 	{ input: 'I feel terrible', output: categories[1] },
+	{ input: 'I feel bad today', output: categories[1] },
 	{ input: 'Thankyou', output: categories[2] },
 	{ input: 'That sounds good', output: categories[2] },
 	{ input: 'The weather feels beautiful today', output: categories[2] },
@@ -21,7 +22,7 @@ if (fs.existsSync('sentiments-model.json')) {
 	const trainedJson = fs.readFileSync('sentiments-model.json');
 	net.fromJSON(JSON.parse(trainedJson));
 } else {
-	net.train(trainingData, { log: true, iterations: 500 });
+	net.train(trainingData, { log: true, iterations: 1000});
 	fs.writeFileSync('sentiments-model.json', JSON.stringify(net.toJSON()));
 }
-console.log(net.run('I feel terrible'));
+console.log(net.run('worst day ever'));
